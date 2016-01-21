@@ -128,10 +128,10 @@ int RAWConverter::convertRAW(std::string filename,ConversionParameters conversio
         thumbnail_only = conversionParameters.getThumbnailOnly();
         output_tiff = conversionParameters.getOutputTiff();
 //        identify_only = conversionParameters.getIdentifyOnly();
-//        user_qual = conversionParameters.getUserQual();
+        user_qual = conversionParameters.getUserQual();
 //        user_black = conversionParameters.getUserBlack();
 //        user_sat = conversionParameters.getUserSat();
-//        user_flip = conversionParameters.getUserFlip();
+       user_flip = conversionParameters.getUserFlip();
 //        use_fuji_rotate = conversionParameters.getUseFujiRotate();
 //        write_to_stdout = conversionParameters.getWriteToStdout();
 //        read_from_stdin = conversionParameters.getReadFromStdin();
@@ -146,15 +146,15 @@ int RAWConverter::convertRAW(std::string filename,ConversionParameters conversio
 //        //ut = conversionParameters.getUt();
 //        //camprofile ?
 //        //outprofile ?
-//        threshold = conversionParameters.getThreshold();
-//        bright = conversionParameters.getBright();
+        threshold = conversionParameters.getThreshold();
+        bright = conversionParameters.getBright();
 //        arg = conversionParameters.getArg();
 //        status = conversionParameters.getStatus();
 //        quality = conversionParameters.getQuality();
 //        //aber = conversionParameters.getAber();
 //       // gamm = conversionParameters.getGamm();
 //        med_passes = conversionParameters.getMedPasses();
-       highlight = conversionParameters.getMedPasses();
+       highlight = conversionParameters.getHighlight();
 //        shot_select = conversionParameters.getShotSelect();
 //        multi_out = conversionParameters.getMultiOut();
 //        output_color = conversionParameters.getOutputColor();
@@ -168,7 +168,7 @@ int RAWConverter::convertRAW(std::string filename,ConversionParameters conversio
         document_mode = conversionParameters.getDocumentMode();
         no_auto_bright = conversionParameters.getNoAutoBright();
 //        output_bps = conversionParameters.getOutputBps();
-
+       // timestamp_only = conversionParameters.getTimestampOnly();
         /* BRATEK*/
         /* tutaj musisz przypisac tak samo jak dla 2 powyższych
          * wartości z obiektu conversionParameters

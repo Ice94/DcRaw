@@ -36,7 +36,7 @@ private slots:
     void on_convertButton_clicked();
 
 
-    void on_comboBox_highlighted(int index);
+
 
     void on_comboBoxHighlights_highlighted(int index);
 

@@ -159,7 +159,12 @@ ConversionParameters MainWindow:: getConversionParameters()
     conversionParameters.setNoAutoBright(ui->checkBoxDontAutoBrighten->isChecked() ? 1 : 0);
     conversionParameters.setUseCameraWb(ui->checkBoxCameraWb->isChecked() ? 1 : 0);
     conversionParameters.setDocumentMode(ui->checkBoxNoColorNoInterpolation->isChecked() ? 1 : 0);
-    conversionParameters.setHighlight(ui->comboBoxHighlights->currentText().toInt());
+   // conversionParameters.setTimestampOnly(ui->checkBoxChangeDateToCameraTime->isChecked() ? 1 : 0);
+    conversionParameters.setHighlight(ui->comboBoxHighlights->currentIndex());
+    conversionParameters.setUserFlip(ui->comboBoxRotateImage->currentIndex());
+    conversionParameters.setUserQual(ui->comboBoxQuality->currentIndex());
+    conversionParameters.setBright(ui->lineEditBrigtness->text().toInt());
+    conversionParameters.setTreshold(ui->lineEditThreshold->text().toInt());
 
     return conversionParameters;
 }
