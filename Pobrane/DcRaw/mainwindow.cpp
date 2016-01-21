@@ -17,7 +17,7 @@
 #include <QScrollBar>
 #include <QtGui>
 #include <QtCore>
-#include <QtMessageBox>
+#include <QMessageBox>
 #include "rawconverter.h"
 #include "conversionparameters.h"
 
@@ -138,7 +138,7 @@ void MainWindow::on_zoomOutButton_clicked()
 {
     resizeImage(0.8);
 }
-ConversionParameters getConversionParameters()
+ConversionParameters MainWindow:: getConversionParameters()
 {
     ConversionParameters conversionParameters;
     conversionParameters.setOutputTiff(1);
@@ -151,6 +151,16 @@ ConversionParameters getConversionParameters()
      * ta funkcja jest wywolywana przy kliku Convert i przekazuje ten obiekt
      * do funkcji konwertujacej RAWConverter::convertRAW(..)
      */
+
+    conversionParameters.setHalfSize(ui->checkBoxHalfsizeinterpolation->isChecked() ? 1 : 0);
+    conversionParameters.setFourColorRGB(ui->checkBoxFourColorInterpolation->isChecked() ? 1 : 0);
+    conversionParameters.setDocumentMode(ui->checkBoxDocumentMode->isChecked() ? 1 : 0);
+    conversionParameters.setUse_auto_wb(ui->checkBoxAverageWB->isChecked() ? 1 : 0);
+    conversionParameters.setNoAutoBright(ui->checkBoxDontAutoBrighten->isChecked() ? 1 : 0);
+    conversionParameters.setUseCameraWb(ui->checkBoxCameraWb->isChecked() ? 1 : 0);
+    conversionParameters.setDocumentMode(ui->checkBoxNoColorNoInterpolation->isChecked() ? 1 : 0);
+    conversionParameters.setHighlight(ui->comboBoxHighlights->currentText().toInt());
+
     return conversionParameters;
 }
 
@@ -164,7 +174,11 @@ void MainWindow::on_convertButton_clicked()
     }
 }
 
-void MainWindow::on_buttonInfo_clicked()
+
+
+
+
+void MainWindow::on_comboBoxHighlights_highlighted(int index)
 {
-    QMessageBox::information(this,"PL");
+
 }

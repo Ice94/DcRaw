@@ -35,7 +35,10 @@ private slots:
 
     void on_convertButton_clicked();
 
-    void on_buttonInfo_clicked();
+
+    void on_comboBox_highlighted(int index);
+
+    void on_comboBoxHighlights_highlighted(int index);
 
 private:
     Ui::MainWindow *ui;
@@ -49,6 +52,7 @@ private:
     QString currentPath;
     QLabel* imageLabel;
     void resizeImage(double factor);
+    ConversionParameters getConversionParameters();
     QDirModel* dirModel;
     double scaleFactor = 1.0;
 

@@ -109,19 +109,6 @@
      <string>+</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonInfo">
-    <property name="geometry">
-     <rect>
-      <x>1000</x>
-      <y>120</y>
-      <width>99</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Info</string>
-    </property>
-   </widget>
    <widget class="QCheckBox" name="checkBoxHalfsizeinterpolation">
     <property name="geometry">
      <rect>
@@ -159,6 +146,123 @@
     </property>
     <property name="text">
      <string>Don't strech or rotate raw pixels</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBoxDocumentMode">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>230</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Document Mode</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBoxAverageWB">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>250</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Average white balans</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBoxHighlights">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>270</y>
+      <width>85</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentText">
+     <string>0</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>8</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>280</y>
+      <width>71</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Highlights</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBoxDontAutoBrighten">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>130</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> Don't automatically brighten the image</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBoxCameraWb">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>110</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Use camera white balans</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBoxNoColorNoInterpolation">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>310</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>No color, no interpolation</string>
     </property>
    </widget>
   </widget>

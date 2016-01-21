@@ -13,10 +13,10 @@ RAWConverter::~RAWConverter()
 }
 
 QStringList RAWConverter::RAW_FORMATS({"*.cr2","*.cr","*.erf","*.crw","*.dng",
-                                       "*.raf","*.raw","*.3fr","*.nef","*.nrw",
+                                       "*.raf","*.raw","*.3fr","*.nrw",
                                       "*.bay","*.fff","*.dcs","*.dcr","*.drf","*.k25"
                                       "*.kdc","*.tif","*.mos","*.pxn","*.mef",
-                                      "*.mrw","*.nef","*.nrw","*.orf","*.rw2",
+                                      "*.mrw","*.nrw","*.orf","*.rw2",
                                       "*.ptx","*.pef","*.cap","*.iiq","*.eip"});
 
 int RAWConverter::convertRAW(std::string filename,ConversionParameters conversionParameters) {
@@ -59,7 +59,7 @@ int RAWConverter::convertRAW(std::string filename,ConversionParameters conversio
 //           FORC4 user_mul[c] = atof(argv[arg++]);  break;
 //          case 'C':  aber[0] = 1 / atof(argv[arg++]);
 //             aber[2] = 1 / atof(argv[arg++]);  break;
-//          case 'g':  gamm[0] =     atof(argv[arg++]);
+//          case 'g':  gamm[0] =     atof(argv[arg++]);void
 //             gamm[1] =     atof(argv[arg++]);
 //             if (gamm[0]) gamm[0] = 1/gamm[0]; break;
 //          case 'k':  user_black  = atoi(argv[arg++]);  break;
@@ -127,47 +127,47 @@ int RAWConverter::convertRAW(std::string filename,ConversionParameters conversio
 //      }
         thumbnail_only = conversionParameters.getThumbnailOnly();
         output_tiff = conversionParameters.getOutputTiff();
-        identify_only = conversionParameters.getIdentifyOnly();
-        user_qual = conversionParameters.getUserQual();
-        user_black = conversionParameters.getUserBlack();
-        user_sat = conversionParameters.getUserSat();
-        user_flip = conversionParameters.getUserFlip();
-        use_fuji_rotate = conversionParameters.getUseFujiRotate();
-        write_to_stdout = conversionParameters.getWriteToStdout();
-        read_from_stdin = conversionParameters.getReadFromStdin();
-        sp = conversionParameters.getSp();
-        bpfile = conversionParameters.getBpFile();
-        dark_frame = conversionParameters.getDarkFrame();
-        write_ext = conversionParameters.getWriteExt();
-        opm = conversionParameters.getOpm();
-        opt = conversionParameters.getOpt();
-        ofname = conversionParameters.getOfName();
-        cp = conversionParameters.getCp();
-        //ut = conversionParameters.getUt();
-        //camprofile ?
-        //outprofile ?
-        threshold = conversionParameters.getThreshold();
-        bright = conversionParameters.getBright();
-        arg = conversionParameters.getArg();
-        status = conversionParameters.getStatus();
-        quality = conversionParameters.getQuality();
-        //aber = conversionParameters.getAber();
-       // gamm = conversionParameters.getGamm();
-        med_passes = conversionParameters.getMedPasses();
-        highlight = conversionParameters.getMedPasses();
-        shot_select = conversionParameters.getShotSelect();
-        multi_out = conversionParameters.getMultiOut();
-        output_color = conversionParameters.getOutputColor();
-        verbose = conversionParameters.getVerbose();
-        half_size = conversionParameters.getHalfSize();
+//        identify_only = conversionParameters.getIdentifyOnly();
+//        user_qual = conversionParameters.getUserQual();
+//        user_black = conversionParameters.getUserBlack();
+//        user_sat = conversionParameters.getUserSat();
+//        user_flip = conversionParameters.getUserFlip();
+//        use_fuji_rotate = conversionParameters.getUseFujiRotate();
+//        write_to_stdout = conversionParameters.getWriteToStdout();
+//        read_from_stdin = conversionParameters.getReadFromStdin();
+//        sp = conversionParameters.getSp();
+//        bpfile = conversionParameters.getBpFile();
+//        dark_frame = conversionParameters.getDarkFrame();
+//        write_ext = conversionParameters.getWriteExt();
+//        opm = conversionParameters.getOpm();
+//        opt = conversionParameters.getOpt();
+//        ofname = conversionParameters.getOfName();
+//        cp = conversionParameters.getCp();
+//        //ut = conversionParameters.getUt();
+//        //camprofile ?
+//        //outprofile ?
+//        threshold = conversionParameters.getThreshold();
+//        bright = conversionParameters.getBright();
+//        arg = conversionParameters.getArg();
+//        status = conversionParameters.getStatus();
+//        quality = conversionParameters.getQuality();
+//        //aber = conversionParameters.getAber();
+//       // gamm = conversionParameters.getGamm();
+//        med_passes = conversionParameters.getMedPasses();
+       highlight = conversionParameters.getMedPasses();
+//        shot_select = conversionParameters.getShotSelect();
+//        multi_out = conversionParameters.getMultiOut();
+//        output_color = conversionParameters.getOutputColor();
+//        verbose = conversionParameters.getVerbose();
+       half_size = conversionParameters.getHalfSize();
         four_color_rgb = conversionParameters.getFourColorRGB();
-        //greybox = conversionParameters.getGreybox();
+//        //greybox = conversionParameters.getGreybox();
         use_auto_wb = conversionParameters.getUse_auto_wb();
-        use_camera_wb = conversionParameters.getUseCameraWb();
-        use_camera_matrix = conversionParameters.getUseCameraMatrix();
+//        use_camera_wb = conversionParameters.getUseCameraWb();
+//        use_camera_matrix = conversionParameters.getUseCameraMatrix();
         document_mode = conversionParameters.getDocumentMode();
         no_auto_bright = conversionParameters.getNoAutoBright();
-        output_bps = conversionParameters.getOutputBps();
+//        output_bps = conversionParameters.getOutputBps();
 
         /* BRATEK*/
         /* tutaj musisz przypisac tak samo jak dla 2 powyższych
