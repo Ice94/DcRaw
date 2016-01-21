@@ -35,6 +35,8 @@ private slots:
 
     void on_convertButton_clicked();
 
+    void on_buttonInfo_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString applicationDirPath;

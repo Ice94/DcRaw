@@ -15,6 +15,9 @@
 #include <QScrollArea>
 #include <QSizePolicy>
 #include <QScrollBar>
+#include <QtGui>
+#include <QtCore>
+#include <QtMessageBox>
 #include "rawconverter.h"
 #include "conversionparameters.h"
 
@@ -159,4 +162,9 @@ void MainWindow::on_convertButton_clicked()
         currentConvertedImg = FileUtil::moveToTmp(FileUtil::changeExtension(currentImg,".tiff"),applicationDirPath);
         displayImage(QString::fromStdString(currentConvertedImg));
     }
+}
+
+void MainWindow::on_buttonInfo_clicked()
+{
+    QMessageBox::information(this,"PL");
 }

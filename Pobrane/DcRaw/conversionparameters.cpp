@@ -155,7 +155,7 @@ char * ConversionParameters::getCp() const
 void ConversionParameters::setCp(char * str)
 {
     cp = str;
-}
+}/*
 struct utimbuf * ConversionParameters::getUt() const
 {
     return ut;
@@ -163,7 +163,7 @@ struct utimbuf * ConversionParameters::getUt() const
 void ConversionParameters::setUt(struct utimbuf  ut)
 {
     this->ut = ut ;
-}
+}*/
 const char * ConversionParameters::getCamProfile() const
 {
     return cam_profile;
@@ -219,7 +219,7 @@ int ConversionParameters::getQuality() const
 void ConversionParameters::setQuality(int value)
 {
     quality = value;
-}
+}/*
 const double * ConversionParameters::getAber() const
 {
    return aber;
@@ -235,7 +235,7 @@ double * ConversionParameters::getGamm() const
 void ConversionParameters::setGamm(double * Gamm)
 {
     gamm = Gamm;
-}
+}*/
 int ConversionParameters::getMedPasses() const
 {
     return med_passes;
@@ -300,6 +300,7 @@ void ConversionParameters::setFourColorRGB(int color)
 {
     four_color_rgb = color;
 }
+/*
 unsigned * ConversionParameters::getGreybox() const
 {
     return greybox;
@@ -307,7 +308,7 @@ unsigned * ConversionParameters::getGreybox() const
 void ConversionParameters::setGreybox(const unsigned int greybox [])
 {
     this->greybox = greybox;
-}
+}*/
 int ConversionParameters::getUse_auto_wb() const
 {
     return use_auto_wb;

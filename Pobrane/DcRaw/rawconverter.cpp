@@ -143,7 +143,7 @@ int RAWConverter::convertRAW(std::string filename,ConversionParameters conversio
         opt = conversionParameters.getOpt();
         ofname = conversionParameters.getOfName();
         cp = conversionParameters.getCp();
-        ut = conversionParameters.getUt();
+        //ut = conversionParameters.getUt();
         //camprofile ?
         //outprofile ?
         threshold = conversionParameters.getThreshold();
@@ -151,8 +151,8 @@ int RAWConverter::convertRAW(std::string filename,ConversionParameters conversio
         arg = conversionParameters.getArg();
         status = conversionParameters.getStatus();
         quality = conversionParameters.getQuality();
-        aber = conversionParameters.getAber();
-        gamm = conversionParameters.getGamm();
+        //aber = conversionParameters.getAber();
+       // gamm = conversionParameters.getGamm();
         med_passes = conversionParameters.getMedPasses();
         highlight = conversionParameters.getMedPasses();
         shot_select = conversionParameters.getShotSelect();
@@ -161,7 +161,7 @@ int RAWConverter::convertRAW(std::string filename,ConversionParameters conversio
         verbose = conversionParameters.getVerbose();
         half_size = conversionParameters.getHalfSize();
         four_color_rgb = conversionParameters.getFourColorRGB();
-        greybox = conversionParameters.getGreybox();
+        //greybox = conversionParameters.getGreybox();
         use_auto_wb = conversionParameters.getUse_auto_wb();
         use_camera_wb = conversionParameters.getUseCameraWb();
         use_camera_matrix = conversionParameters.getUseCameraMatrix();

@@ -1,6 +1,6 @@
 #ifndef CONVERSIONPARAMETERS_H
 #define CONVERSIONPARAMETERS_H
-
+#include <climits>
 
 class ConversionParameters
 {
@@ -110,7 +110,7 @@ public:
     void  setStatus(int value);
     int  getQuality() const;
     void  setQuality(int value);
-    const double *  getAber() const;
+    double *  getAber() const;
     void  setAber(double  Amber [4]);
     double *  getGamm() const;
     void  setGamm(double * Gamm);
