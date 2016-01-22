@@ -43,137 +43,23 @@ int RAWConverter::convertRAW(std::string filename,ConversionParameters conversio
     #endif
 
 
-//      argv[argc] = "";
-//      for (arg=1; (((opm = argv[arg][0]) - 2) | 2) == '+'; ) {
-//        opt = argv[arg++][1];
-//        if ((cp = (char *) strchr (sp="nbrkStqmHACg", opt)))
-//          for (i=0; i < "114111111422"[cp-sp]-'0'; i++)
-//        if (!isdigit(argv[arg+i][0])) {
-//          fprintf (stderr,_("Non-numeric argument to \"-%c\"\n"), opt);
-//          return 1;
-//        }
-//        switch (opt) {
-//          case 'n':  threshold   = atof(argv[arg++]);  break;
-//          case 'b':  bright      = atof(argv[arg++]);  break;
-//          case 'r':
-//           FORC4 user_mul[c] = atof(argv[arg++]);  break;
-//          case 'C':  aber[0] = 1 / atof(argv[arg++]);
-//             aber[2] = 1 / atof(argv[arg++]);  break;
-//          case 'g':  gamm[0] =     atof(argv[arg++]);void
-//             gamm[1] =     atof(argv[arg++]);
-//             if (gamm[0]) gamm[0] = 1/gamm[0]; break;
-//          case 'k':  user_black  = atoi(argv[arg++]);  break;
-//          case 'S':  user_sat    = atoi(argv[arg++]);  break;
-//          case 't':  user_flip   = atoi(argv[arg++]);  break;
-//          case 'q':  user_qual   = atoi(argv[arg++]);  break;
-//          case 'm':  med_passes  = atoi(argv[arg++]);  break;
-//          case 'H':  highlight   = atoi(argv[arg++]);  break;
-//          case 's':
-//        shot_select = abs(atoi(argv[arg]));
-//        multi_out = !strcmp(argv[arg++],"all");
-//        break;
-//          case 'o':
-//        if (isdigit(argv[arg][0]) && !argv[arg][1])
-//          output_color = atoi(argv[arg++]);
-//    #ifndef NO_LCMS
-//        else     out_profile = argv[arg++];
-//        break;
-//          case 'p':  cam_profile = argv[arg++];
-//    #endif
-//        break;
-//          case 'P':  bpfile     = argv[arg++];  break;
-//          case 'K':  dark_frame = argv[arg++];  break;
-//          case 'z':  timestamp_only    = 1;  break;
-//          case 'e':  thumbnail_only    = 1;  break;
-//          case 'i':  identify_only     = 1;  break;
-//          case 'c':  write_to_stdout   = 1;  break;
-//          case 'v':  verbose           = 1;  break;
-//          case 'h':  half_size         = 1;  break;
-//          case 'f':  four_color_rgb    = 1;  break;
-//          case 'A':  FORC4 greybox[c]  = atoi(argv[arg++]);
-//          case 'a':  use_auto_wb       = 1;  break;
-//          case 'w':  use_camera_wb     = 1;  break;
-//          case 'M':  use_camera_matrix = 3 * (opm == '+');  break;
-//          case 'I':  read_from_stdin   = 1;  break;
-//          case 'E':  document_mode++;
-//          case 'D':  document_mode++;
-//          case 'd':  document_mode++;
-//          case 'j':  use_fuji_rotate   = 0;  break;
-//          case 'W':  no_auto_bright    = 1;  break;
-//          case 'T':  output_tiff       = 1;  break;
-//          case '4':  gamm[0] = gamm[1] =
-//             no_auto_bright    = 1;
-//          case '6':  output_bps       = 16;  break;
-//          default:
-//        fprintf (stderr,_("Unknown option \"-%c\".\n"), opt);
-//        return 1;
-//        }
-//      }
-//      if (arg == argc) {
-//        fprintf (stderr,_("No files to process.\n"));
-//        return 1;
-//      }
-//      if (write_to_stdout) {
-//        if (isatty(1)) {
-//          fprintf (stderr,_("Will not write an image to the terminal!\n"));
-//          return 1;
-//        }
-//    #if defined(WIN32) || defined(DJGPP) || defined(__CYGWIN__)
-//        if (setmode(1,O_BINARY) < 0) {
-//          perror ("setmode()");
-//          return 1;
-//        }
-//    #endif
-//      }
+
         thumbnail_only = conversionParameters.getThumbnailOnly();
         output_tiff = conversionParameters.getOutputTiff();
-//        identify_only = conversionParameters.getIdentifyOnly();
         user_qual = conversionParameters.getUserQual();
-//        user_black = conversionParameters.getUserBlack();
-//        user_sat = conversionParameters.getUserSat();
-       user_flip = conversionParameters.getUserFlip();
-//        use_fuji_rotate = conversionParameters.getUseFujiRotate();
-//        write_to_stdout = conversionParameters.getWriteToStdout();
-//        read_from_stdin = conversionParameters.getReadFromStdin();
-//        sp = conversionParameters.getSp();
-//        bpfile = conversionParameters.getBpFile();
-//        dark_frame = conversionParameters.getDarkFrame();
-//        write_ext = conversionParameters.getWriteExt();
-//        opm = conversionParameters.getOpm();
-//        opt = conversionParameters.getOpt();
-//        ofname = conversionParameters.getOfName();
-//        cp = conversionParameters.getCp();
-//        //ut = conversionParameters.getUt();
-//        //camprofile ?
-//        //outprofile ?
+        user_flip = conversionParameters.getUserFlip();
         threshold = conversionParameters.getThreshold();
         bright = conversionParameters.getBright();
-//        arg = conversionParameters.getArg();
-//        status = conversionParameters.getStatus();
-//        quality = conversionParameters.getQuality();
-//        //aber = conversionParameters.getAber();
-//       // gamm = conversionParameters.getGamm();
-//        med_passes = conversionParameters.getMedPasses();
-       highlight = conversionParameters.getHighlight();
-//        shot_select = conversionParameters.getShotSelect();
-//        multi_out = conversionParameters.getMultiOut();
-//        output_color = conversionParameters.getOutputColor();
-//        verbose = conversionParameters.getVerbose();
-       half_size = conversionParameters.getHalfSize();
+        quality = conversionParameters.getQuality();
+        highlight = conversionParameters.getHighlight();
+        half_size = conversionParameters.getHalfSize();
         four_color_rgb = conversionParameters.getFourColorRGB();
-//        //greybox = conversionParameters.getGreybox();
         use_auto_wb = conversionParameters.getUse_auto_wb();
-//        use_camera_wb = conversionParameters.getUseCameraWb();
-//        use_camera_matrix = conversionParameters.getUseCameraMatrix();
+        use_camera_wb = conversionParameters.getUseCameraWb();
         document_mode = conversionParameters.getDocumentMode();
         no_auto_bright = conversionParameters.getNoAutoBright();
-//        output_bps = conversionParameters.getOutputBps();
-       // timestamp_only = conversionParameters.getTimestampOnly();
-        /* BRATEK*/
-        /* tutaj musisz przypisac tak samo jak dla 2 powyższych
-         * wartości z obiektu conversionParameters
-         * w tym zakomentowanym switch-case masz ktore opcje odpowiadaja jakim zmiennym
-         */
+
+
         status = 1;
         raw_image = 0;
         image = 0;

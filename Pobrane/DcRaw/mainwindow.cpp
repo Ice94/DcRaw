@@ -103,7 +103,7 @@ void MainWindow::displayImage(QString imagePath)
 {
     if(!imagePath.isNull() && !imagePath.isEmpty()) {
         imageLabel->setPixmap(QPixmap(imagePath));
-        imageLabel->resize(imageLabel->pixmap()->size());
+        imageLabel->resize(scaleFactor * imageLabel->pixmap()->size());
     }
 }
 
@@ -143,14 +143,7 @@ ConversionParameters MainWindow:: getConversionParameters()
     ConversionParameters conversionParameters;
     conversionParameters.setOutputTiff(1);
     conversionParameters.setThumbnailOnly(0);
-    /* BRATEK
-     * tutaj musisz w tym obiekcie wysetowac odpowiednie pola
-     * wartosciami z kontrolek w gui ktore odpowiadaja
-     * danym parametrom
-     * dwa powyzsze zawsze maja zostac takie jakie dalem
-     * ta funkcja jest wywolywana przy kliku Convert i przekazuje ten obiekt
-     * do funkcji konwertujacej RAWConverter::convertRAW(..)
-     */
+
 
     conversionParameters.setHalfSize(ui->checkBoxHalfsizeinterpolation->isChecked() ? 1 : 0);
     conversionParameters.setFourColorRGB(ui->checkBoxFourColorInterpolation->isChecked() ? 1 : 0);
@@ -159,7 +152,6 @@ ConversionParameters MainWindow:: getConversionParameters()
     conversionParameters.setNoAutoBright(ui->checkBoxDontAutoBrighten->isChecked() ? 1 : 0);
     conversionParameters.setUseCameraWb(ui->checkBoxCameraWb->isChecked() ? 1 : 0);
     conversionParameters.setDocumentMode(ui->checkBoxNoColorNoInterpolation->isChecked() ? 1 : 0);
-   // conversionParameters.setTimestampOnly(ui->checkBoxChangeDateToCameraTime->isChecked() ? 1 : 0);
     conversionParameters.setHighlight(ui->comboBoxHighlights->currentIndex());
     conversionParameters.setUserFlip(ui->comboBoxRotateImage->currentIndex());
     conversionParameters.setUserQual(ui->comboBoxQuality->currentIndex());

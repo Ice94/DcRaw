@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>816</height>
+    <width>1262</width>
+    <height>765</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,15 +23,11 @@
       <height>581</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QListWidget" name="listWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>-2</y>
-      <width>1201</width>
-      <height>81</height>
-     </rect>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
    </widget>
    <widget class="QScrollArea" name="scrollArea">
@@ -42,6 +38,12 @@
       <width>601</width>
       <height>581</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="widgetResizable">
      <bool>true</bool>
@@ -55,39 +57,15 @@
        <height>579</height>
       </rect>
      </property>
+     <zorder>listWidget</zorder>
+     <zorder>comboBoxRotateImage</zorder>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="convertButton">
-    <property name="geometry">
-     <rect>
-      <x>1000</x>
-      <y>630</y>
-      <width>95</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Convert</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="saveButton">
-    <property name="geometry">
-     <rect>
-      <x>1100</x>
-      <y>630</y>
-      <width>95</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Save</string>
-    </property>
    </widget>
    <widget class="QPushButton" name="zoomOutButton">
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>80</y>
+      <y>90</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -99,8 +77,8 @@
    <widget class="QPushButton" name="zoomInButton">
     <property name="geometry">
      <rect>
-      <x>1040</x>
-      <y>80</y>
+      <x>1030</x>
+      <y>90</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -113,7 +91,7 @@
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>160</y>
+      <y>170</y>
       <width>181</width>
       <height>22</height>
      </rect>
@@ -126,8 +104,8 @@
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>180</y>
-      <width>171</width>
+      <y>190</y>
+      <width>211</width>
       <height>22</height>
      </rect>
     </property>
@@ -139,7 +117,7 @@
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>200</y>
+      <y>210</y>
       <width>171</width>
       <height>41</height>
      </rect>
@@ -152,7 +130,7 @@
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>230</y>
+      <y>240</y>
       <width>161</width>
       <height>22</height>
      </rect>
@@ -165,7 +143,7 @@
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>250</y>
+      <y>260</y>
       <width>181</width>
       <height>22</height>
      </rect>
@@ -174,38 +152,25 @@
      <string>Average white balans</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>1010</x>
-      <y>280</y>
-      <width>71</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Highlights</string>
-    </property>
-   </widget>
    <widget class="QCheckBox" name="checkBoxDontAutoBrighten">
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>130</y>
-      <width>191</width>
-      <height>22</height>
+      <y>140</y>
+      <width>231</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string> Don't automatically brighten the image</string>
+     <string>Don't automatically brighten</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="checkBoxCameraWb">
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>110</y>
-      <width>191</width>
+      <y>120</y>
+      <width>211</width>
       <height>22</height>
      </rect>
     </property>
@@ -217,8 +182,8 @@
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>310</y>
-      <width>191</width>
+      <y>330</y>
+      <width>231</width>
       <height>22</height>
      </rect>
     </property>
@@ -226,145 +191,24 @@
      <string>No color, no interpolation</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBoxHighlights">
-    <property name="geometry">
-     <rect>
-      <x>1090</x>
-      <y>270</y>
-      <width>85</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="currentText">
-     <string>Remove shadows</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>Remove shadows</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Don't remove shadows</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Safe remove shadows</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Recovery shadows</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Recovery shadows 1</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Recovery shadows 2</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Recovery shadows 3</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Recovery shadows 4</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Recovery shadows 5</string>
-     </property>
-    </item>
-   </widget>
    <widget class="QCheckBox" name="checkBoxChangeDateToCameraTime">
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>330</y>
-      <width>191</width>
+      <y>350</y>
+      <width>331</width>
       <height>22</height>
      </rect>
     </property>
     <property name="text">
-     <string>Change file dates to camer timestamp</string>
+     <string>Change file dates to camera timestamp</string>
     </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>1010</x>
-      <y>360</y>
-      <width>67</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Rotate</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBoxRotateImage">
-    <property name="geometry">
-     <rect>
-      <x>1080</x>
-      <y>350</y>
-      <width>85</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>Don't rotate</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Reflection vertical axis</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Reflection horizontal axis</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>180 degree</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Reflection vertical axis and rotate 90 degree to right</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>90 degree to left</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>90 degree to right</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Reflection vertical axis and rotate 90 to left</string>
-     </property>
-    </item>
    </widget>
    <widget class="QComboBox" name="comboBoxQuality">
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>410</y>
+      <y>430</y>
       <width>85</width>
       <height>27</height>
      </rect>
@@ -394,7 +238,7 @@
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>390</y>
+      <y>410</y>
       <width>151</width>
       <height>17</height>
      </rect>
@@ -407,7 +251,7 @@
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>440</y>
+      <y>460</y>
       <width>141</width>
       <height>17</height>
      </rect>
@@ -420,7 +264,7 @@
     <property name="geometry">
      <rect>
       <x>1000</x>
-      <y>460</y>
+      <y>480</y>
       <width>85</width>
       <height>27</height>
      </rect>
@@ -456,66 +300,273 @@
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>1010</x>
-      <y>490</y>
-      <width>81</width>
-      <height>17</height>
+      <x>1000</x>
+      <y>290</y>
+      <width>221</width>
+      <height>31</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Brightness</string>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Highlights</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxHighlights">
+       <property name="currentText">
+        <string>Remove shadows</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Remove shadows</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Don't remove shadows</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Safe remove shadows</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Recovery shadows</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Recovery shadows 1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Recovery shadows 2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Recovery shadows 3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Recovery shadows 4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Recovery shadows 5</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLineEdit" name="lineEditBrigtness">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>1010</x>
-      <y>510</y>
-      <width>113</width>
-      <height>27</height>
+      <x>1000</x>
+      <y>380</y>
+      <width>171</width>
+      <height>31</height>
      </rect>
     </property>
-    <property name="text">
-     <string>1</string>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Rotate</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxRotateImage">
+       <item>
+        <property name="text">
+         <string>Don't rotate</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reflection vertical axis</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reflection horizontal axis</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>180 degree</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reflection vertical axis and rotate 90 degree to right</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>90 degree to left</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>90 degree to right</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reflection vertical axis and rotate 90 to left</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>1010</x>
-      <y>540</y>
-      <width>111</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Set threshhold</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEditThreshold">
-    <property name="geometry">
-     <rect>
-      <x>1010</x>
+      <x>1000</x>
       <y>560</y>
-      <width>113</width>
-      <height>27</height>
+      <width>171</width>
+      <height>35</height>
      </rect>
     </property>
-    <property name="text">
-     <string>0</string>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Set threshhold</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditThreshold">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1400</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
    </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>520</y>
+      <width>141</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Brightness</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditBrigtness">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>630</y>
+      <width>231</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QPushButton" name="convertButton">
+       <property name="text">
+        <string>Convert</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>listWidget</zorder>
+   <zorder>treeView</zorder>
+   <zorder>scrollArea</zorder>
+   <zorder>convertButton</zorder>
+   <zorder>saveButton</zorder>
+   <zorder>zoomOutButton</zorder>
+   <zorder>zoomInButton</zorder>
+   <zorder>checkBoxHalfsizeinterpolation</zorder>
+   <zorder>checkBoxFourColorInterpolation</zorder>
+   <zorder>checkBoxStrechOrRotate</zorder>
+   <zorder>checkBoxDocumentMode</zorder>
+   <zorder>checkBoxAverageWB</zorder>
+   <zorder>label</zorder>
+   <zorder>checkBoxDontAutoBrighten</zorder>
+   <zorder>checkBoxCameraWb</zorder>
+   <zorder>checkBoxNoColorNoInterpolation</zorder>
+   <zorder>comboBoxHighlights</zorder>
+   <zorder>checkBoxChangeDateToCameraTime</zorder>
+   <zorder>label_2</zorder>
+   <zorder>comboBoxRotateImage</zorder>
+   <zorder>comboBoxQuality</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>comboBox</zorder>
+   <zorder>label_5</zorder>
+   <zorder>lineEditBrigtness</zorder>
+   <zorder>label_6</zorder>
+   <zorder>lineEditThreshold</zorder>
+   <zorder></zorder>
+   <zorder></zorder>
+   <zorder></zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1200</width>
-     <height>25</height>
+     <width>1262</width>
+     <height>27</height>
     </rect>
    </property>
   </widget>
