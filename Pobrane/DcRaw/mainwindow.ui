@@ -57,8 +57,6 @@
        <height>579</height>
       </rect>
      </property>
-     <zorder>listWidget</zorder>
-     <zorder>comboBoxRotateImage</zorder>
     </widget>
    </widget>
    <widget class="QPushButton" name="zoomOutButton">
@@ -97,7 +95,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Half size interpolation</string>
+     <string>Half size color image</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="checkBoxFourColorInterpolation">
@@ -118,7 +116,7 @@
      <rect>
       <x>1000</x>
       <y>210</y>
-      <width>171</width>
+      <width>251</width>
       <height>41</height>
      </rect>
     </property>
@@ -189,19 +187,6 @@
     </property>
     <property name="text">
      <string>No color, no interpolation</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBoxChangeDateToCameraTime">
-    <property name="geometry">
-     <rect>
-      <x>1000</x>
-      <y>350</y>
-      <width>331</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Change file dates to camera timestamp</string>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBoxQuality">
@@ -300,12 +285,12 @@
      </property>
     </item>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>1000</x>
       <y>290</y>
-      <width>221</width>
+      <width>264</width>
       <height>31</height>
      </rect>
     </property>
@@ -371,12 +356,12 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>1000</x>
       <y>380</y>
-      <width>171</width>
+      <width>437</width>
       <height>31</height>
      </rect>
     </property>
@@ -434,7 +419,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>1000</x>
@@ -476,7 +461,7 @@
      </sizepolicy>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>1000</x>
@@ -502,7 +487,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>1000</x>
@@ -528,11 +513,11 @@
      </item>
     </layout>
    </widget>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
    <zorder>listWidget</zorder>
    <zorder>treeView</zorder>
    <zorder>scrollArea</zorder>
-   <zorder>convertButton</zorder>
-   <zorder>saveButton</zorder>
    <zorder>zoomOutButton</zorder>
    <zorder>zoomInButton</zorder>
    <zorder>checkBoxHalfsizeinterpolation</zorder>
@@ -540,25 +525,16 @@
    <zorder>checkBoxStrechOrRotate</zorder>
    <zorder>checkBoxDocumentMode</zorder>
    <zorder>checkBoxAverageWB</zorder>
-   <zorder>label</zorder>
    <zorder>checkBoxDontAutoBrighten</zorder>
    <zorder>checkBoxCameraWb</zorder>
    <zorder>checkBoxNoColorNoInterpolation</zorder>
-   <zorder>comboBoxHighlights</zorder>
-   <zorder>checkBoxChangeDateToCameraTime</zorder>
-   <zorder>label_2</zorder>
-   <zorder>comboBoxRotateImage</zorder>
    <zorder>comboBoxQuality</zorder>
    <zorder>label_3</zorder>
    <zorder>label_4</zorder>
    <zorder>comboBox</zorder>
-   <zorder>label_5</zorder>
-   <zorder>lineEditBrigtness</zorder>
-   <zorder>label_6</zorder>
-   <zorder>lineEditThreshold</zorder>
-   <zorder></zorder>
-   <zorder></zorder>
-   <zorder></zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -566,7 +542,7 @@
      <x>0</x>
      <y>0</y>
      <width>1262</width>
-     <height>27</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
